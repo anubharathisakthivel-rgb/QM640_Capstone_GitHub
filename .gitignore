@@ -1,2 +1,6 @@
-models/best_ft_random_forest.pkl
-models/random_forest.pkl
+(Get-Content .gitignore) | Where-Object {
+    $_ -notin @(
+        "models/best_ft_random_forest.pkl",
+        "models/random_forest.pkl"
+    )
+} | Set-Content .gitignore
